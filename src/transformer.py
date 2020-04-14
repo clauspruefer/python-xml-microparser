@@ -2,8 +2,9 @@
 #  .                     XML Microparser Python Module                       .
 # ]*[ --------------------------------------------------------------------- ]*[
 #  .                                                                         .
-#  .  Copyright Claus Prüfer 2016-2018                                       .
+#  .  Copyright Claus Prüfer 2016-2019                                       .
 #  .                                                                         .
+#  .  XML Parser JSON Transformer Module                                     .
 #  .                                                                         .
 # ]*[ --------------------------------------------------------------------- ]*[
 
@@ -15,6 +16,14 @@ import logging
 
 class JSONTransformer():
     """ JSON transformer class.
+
+    Transforms given JSON (text) data into XML format. Data in the first
+    step will be transformed to internal JSON structs and afterwards converted
+    (recursive) to xml.
+
+    This class will be inherited by the microparser.Serializer class which
+    provides base members/methods for recursive transformation processing.
+    .
     """
 
     def __init__(self):

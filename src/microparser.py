@@ -2,8 +2,9 @@
 #  .                     XML Microparser Python Module                       .
 # ]*[ --------------------------------------------------------------------- ]*[
 #  .                                                                         .
-#  .  Copyright Claus Prüfer 2016-2018                                       .
+#  .  Copyright Claus Prüfer 2016-2019                                       .
 #  .                                                                         .
+#  .  Lightweight XML Parser and JSON Transformer Module                     .
 #  .                                                                         .
 # ]*[ --------------------------------------------------------------------- ]*[
 
@@ -13,8 +14,8 @@ import re
 import json
 import logging
 
-from transformer import JSONTransformer
-from helper import Looper
+from xml_microparser.transformer import JSONTransformer
+from xml_microparser.helper import Looper
 
 
 class Parser():
@@ -24,20 +25,32 @@ class Parser():
     This data has to be ommitted and would lead to misbehaviour when provided.
     Also XML namespace parsing is not supported.
 
-    Additionally a JSONTransformation class which transforms the parsed xml
-    structure to internal python dict and returns the json representation is
-    part of this module.
+    The XML will be transformed to internal JSON structs which can easily be
+    iterated over or printed out.
+
+    Actually all lines **MUST** end with a "\\\\n" otherwise input will be
+    treated as a single line and tag closings will not be recognized correctly.
 
     See :doc:`examples` section for valid input, generated output and supported
     features.
 
     Processing flow:
 
-    - Parse xml data line by line.
-    - Setup Element() instances for each found element, add properties.
+    - Process xml input data line by line (add to internal processing list).
+    - Setup Element() instances for each found element in list, add properties.
     - Add elements to Parser._elements list.
-    - Run serializer (add/link child elements in OOP based manner).
-    - This provides an easy interface to analyze and modify the parsed result.
+    - Run Serializer (add/link child elements in OOP based manner).
+    - Easily iterate (automatically recursive) over the given result elements.
+
+    Class Inheritance/Dependencies:
+
+    - microparser.Element->microparser.Serializer->transformer.JSONTransformer
+
+    The microparser.Serializer class provides members/methods for recursive
+    transformation processing for different transformer module/class types.
+
+    Actually only xml transformation is provided, the transformer module is
+    built for future expansion (add multiple formats, e.g. yaml or else).
     """
 
     def __init__(self, payload):
@@ -52,9 +65,11 @@ class Parser():
         >>> import microparser
         >>>
         >>> payload = '' \\
-        >>>     '<tag1>' \\
-        >>>     '    <tag2 a="1" b="value1">value2</tag2>' \\
-        >>>     '</tag1>'
+        >>>     '<tag1>\\n' \\
+        >>>     '    <tag2 a="1" b="value1">\\n' \\
+        >>>     '        <tag3 b="1" c="value2">value3</tag3>\\n' \\
+        >>>     '    </tag2>\\n' \\
+        >>>     '</tag1>\\n'
         >>>
         >>> parser = microparser.Parser(payload)
         >>>
@@ -62,12 +77,12 @@ class Parser():
         >>> parser.process_json()
         >>>
         >>> r1 = parser.get_root_element().get_json_dict()
-        >>> r2 = parser.get_root_element().get_element_by_name('tagid').get_json_dict()
+        >>> r2 = parser.get_element_by_name('tag2').get_json_dict()
+        >>> r3 = parser.get_element_by_id(2).get_json_dict()
         >>>
-        >>> r3 = parser.get_root_element().get_element_by_element_id(2)
-        >>>
-        >>> for element in r3.iterate():
-        >>>     print(element)
+        >>> print(r1)
+        >>> print(r2)
+        >>> print(r3)
         """
 
         self.logger = logging.getLogger(__name__)
@@ -141,6 +156,18 @@ class Parser():
         """
         for item in self._elements:
             if item.get_parent_id() == id:
+                yield item
+
+    def get_child_element(self, name):
+        """ Return elements children searched by element name.
+
+        :param string name: element tag name
+        :yield: found item
+        :rtype: element or None
+        """
+        for item in self._elements:
+            r_name = item.get_name()
+            if r_name == name:
                 yield item
 
     def process_json(self):
@@ -290,6 +317,12 @@ class Parser():
 
 class Serializer(JSONTransformer):
     """ Serializer class.
+
+    Provides methods for element dependency handling. 
+
+    #TODO:
+    This class should be (syntactically correct) moved to own "xml" module
+    (xml.Element.Serializer).
     """
 
     def __init__(self):
@@ -375,6 +408,14 @@ class Serializer(JSONTransformer):
 
 class Element(Serializer):
     """ XML Element container class.
+
+    Provides methods for xml parsing. Inherits from Serializer class.
+    As well hierarchical assignment by parent element/numerical id is
+    part of this class.
+
+    #TODO:
+    This class should be (syntactically correct) moved to own "xml" module
+    (xml.Element).
     """
 
     def __init__(self, *, name, id, line_nr, parent_id):
@@ -510,7 +551,7 @@ class Element(Serializer):
         return self._line_end
 
     def get_attribute_by_name(self, name):
-        """ Get attribute value by name.
+        """ Get attribute value by given attribute name.
 
         :return: attribute value
         :rtype: str

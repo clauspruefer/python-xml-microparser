@@ -2,8 +2,9 @@
 #  .                     XML Microparser Python Module                       .
 # ]*[ --------------------------------------------------------------------- ]*[
 #  .                                                                         .
-#  .  Copyright Claus Prüfer 2016-2018                                       .
+#  .  Copyright Claus Prüfer 2016-2019                                       .
 #  .                                                                         .
+#  .  XML Parser Helper classes                                              .
 #  .                                                                         .
 # ]*[ --------------------------------------------------------------------- ]*[
 
@@ -14,6 +15,13 @@ import logging
 
 class Looper():
     """ Looper Class.
+
+    Provides processing of list of input items (type should be irrelevant,
+    actually set to type string) applied to multiple processing method
+    references (list).
+
+    After single item has been processed by multiple methods specified in
+    methods list (e.g. strip), it will be sent to the final processing function.
     """
 
     def __init__(self, *, payload, function, methods=None):
@@ -23,9 +31,9 @@ class Looper():
         - calls function reference given in function argument using item as argument.
 
         :param list[str] payload: payload list
-        :param str function: function reference
-        :param list[str]: list of methods applied to payload items
-        :ivar list[str] _payload: payload items to be processed
+        :param str function: function reference for item processing after methods processing
+        :param list[str] methods: list of methods applied to item
+        :ivar list[str] _payload: list of payload items to be processed
         :ivar str _function: stored function reference
         :ivar list[str] _methods: list of methods applied to payload items
         :example:
