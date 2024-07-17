@@ -21,7 +21,6 @@ setup(
     },
 
     install_requires = [
-        'pycopg2'
     ],
 
     zip_safe = True
