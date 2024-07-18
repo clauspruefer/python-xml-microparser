@@ -2,22 +2,21 @@ from setuptools import setup
 
 setup(
 
-    name = 'python-xml-microparser',
+    name = 'xmlmicroparser',
     version = '0.50beta',
     author = 'Claus Prüfer',
     author_email = 'pruefer@webcodex.de',
     maintainer = 'Claus Prüfer',
     description = 'A tiny plain xml parser without DTD capability.',
-    homepage = 'http://xml-microparser.python.webcodex.de',
     license = 'GPLv3',
-    long_description = open('./README.rst').read(),
+    long_description = open('./README.md').read(),
 
     packages = [
-        'xml-microparser'
+        'xmlmicroparser'
     ],
 
     package_dir = {
-        'xml-microparser': 'src/'
+        'xmlmicroparser': 'src/'
     },
 
     install_requires = [
