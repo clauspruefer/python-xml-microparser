@@ -8,7 +8,9 @@ Documentation including examples can be found at either [./doc](./doc) or [https
 
 ## 2. Installation
 
-Most Linux Distributions come with already Python3 met dependencies (see **2.1**). Just download the Relase Tarball [link](link) and continue with section **2.2**.
+Most Linux Distributions come with already Python3 met dependencies (see **2.1**).
+
+Just download the current Relase Zip / Tarball @ [Release 0.54Beta](https://github.com/clauspruefer/python-xml-microparser/releases/tag/0.54beta) and continue with section **2.2**.
 
 ## 2.1. Dependencies
 
