@@ -41,7 +41,24 @@ Do this for a pip system where `--break-system-packages` is needed.
 # sudo pip3 install dist/xmlmicroparser-0.50b0.tar.gz --break-system-packages
 ```
 
-## 3. Boost Python
+## 3. Build Manually
+
+First update local git repository. The `setup.py` metadata used for pip resides in `/`.
+
+```bash
+# cd repodir
+# git clone https://github.com/clauspruefer/python-xml-microparser.git
+```
+## 2.3. Build As Non-Root-User
+
+Build python-package with setup-tools (as non root user). This will generate the installabe tarball
+into `./dist/xmlmicroparser-0.54b0.tar.gz`.
+
+```bash
+# python3 setup.py sdist
+```
+
+## 4. Boost Python
 
 Using the XML-Microparser Module with Boost Python C++ https://www.boost.org/doc/libs/1_86_0/libs/python/doc/html/index.html 
 makes XML configuration handling in C++ projects easy.
