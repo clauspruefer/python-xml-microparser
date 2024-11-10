@@ -30,7 +30,7 @@ Package found under Releases.
 Do this for a pip system where `--break-system-packages` is not needed.
 
 ```bash
-# sudo pip3 install ./xmlmicroparser-0.50b0.tar.gz
+# sudo pip3 install ./xmlmicroparser-0.54b0.tar.gz
 ```
 
 ## 2.3. Restrictive PIP Install
