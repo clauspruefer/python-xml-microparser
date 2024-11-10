@@ -30,7 +30,7 @@ Package found under Releases.
 Do this for a pip system where `--break-system-packages` is not needed.
 
 ```bash
-# sudo pip3 install ./xmlmicroparser-0.54b0.tar.gz
+# sudo pip3 install ./python-xml-microparser-0.54beta.tar.gz
 ```
 
 ## 2.3. Restrictive PIP Install
@@ -38,7 +38,7 @@ Do this for a pip system where `--break-system-packages` is not needed.
 Do this for a pip system where `--break-system-packages` is needed.
 
 ```bash
-# sudo pip3 install dist/xmlmicroparser-0.50b0.tar.gz --break-system-packages
+# sudo pip3 install ./python-xml-microparser-0.54beta.tar.gz --break-system-packages
 ```
 
 ## 3. Build Manually
