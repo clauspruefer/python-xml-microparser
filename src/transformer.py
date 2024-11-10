@@ -2,13 +2,11 @@
 #  .                     XML Microparser Python Module                       .
 # ]*[ --------------------------------------------------------------------- ]*[
 #  .                                                                         .
-#  .  Copyright Claus Prüfer 2016-2019                                       .
+#  .  Copyright Claus Prüfer 2016-2024                                       .
 #  .                                                                         .
 #  .  XML Parser JSON Transformer Module                                     .
 #  .                                                                         .
 # ]*[ --------------------------------------------------------------------- ]*[
-
-# -*- coding:utf-8 -*-
 
 import json
 import logging

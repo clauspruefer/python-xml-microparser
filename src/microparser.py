@@ -2,20 +2,18 @@
 #  .                     XML Microparser Python Module                       .
 # ]*[ --------------------------------------------------------------------- ]*[
 #  .                                                                         .
-#  .  Copyright Claus Prüfer 2016-2019                                       .
+#  .  Copyright Claus Prüfer 2016-2024                                       .
 #  .                                                                         .
 #  .  Lightweight XML Parser and JSON Transformer Module                     .
 #  .                                                                         .
 # ]*[ --------------------------------------------------------------------- ]*[
 
-# -*- coding:utf-8 -*-
-
 import re
 import json
 import logging
 
-from xml_microparser.transformer import JSONTransformer
-from xml_microparser.helper import Looper
+from xmlmicroparser.transformer import JSONTransformer
+from xmlmicroparser.helper import Looper
 
 
 class Parser():

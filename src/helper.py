@@ -2,13 +2,11 @@
 #  .                     XML Microparser Python Module                       .
 # ]*[ --------------------------------------------------------------------- ]*[
 #  .                                                                         .
-#  .  Copyright Claus Prüfer 2016-2019                                       .
+#  .  Copyright Claus Prüfer 2016-2024                                       .
 #  .                                                                         .
 #  .  XML Parser Helper classes                                              .
 #  .                                                                         .
 # ]*[ --------------------------------------------------------------------- ]*[
-
-# -*- coding:utf-8 -*-
 
 import logging
 
