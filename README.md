@@ -54,10 +54,16 @@ Clone git repository and change dir.
 ## 3.1. Build As Non-Root-User
 
 Build python-package with setup-tools (as non root user). This will generate the installabe tarball
-into `./dist/xmlmicroparser-0.54b0.tar.gz`.
+into `./dist/xmlmicroparser-0.55b0.tar.gz`.
 
 ```bash
 # python3 setup.py sdist
+```
+
+## 3.2. Install As Root-User
+
+```bash
+# sudo pip3 install ./dist/xmlmicroparser-0.55b0.tar.gz --break-system-packages
 ```
 
 ## 4. Run Tests / Pytest
