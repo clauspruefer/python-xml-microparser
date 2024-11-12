@@ -66,7 +66,7 @@ into `./dist/xmlmicroparser-0.54b0.tar.gz`.
 # pytest
 ```
 
-## 5. Boost Python
+## 5. Example Usage / Boost::Python
 
 Using the XML-Microparser Module with Boost Python C++ https://www.boost.org/doc/libs/1_86_0/libs/python/doc/html/index.html 
 makes XML configuration handling in C++ projects easy.
