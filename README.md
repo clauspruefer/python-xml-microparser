@@ -63,7 +63,6 @@ into `./dist/xmlmicroparser-0.54b0.tar.gz`.
 ## 4. Run Tests / Pytest
 
 ```bash
-# cd python-xml-microparser
 # pytest
 ```
 
