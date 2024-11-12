@@ -16,11 +16,10 @@ Or download the current Relase Zip / Tarball @ [Release 0.54Beta](https://github
 
 ## 2.1. Dependencies
 
-You need the `pip3` Python3 Package Installer, Python3 Setuptools `python3-setuptools` and the downloaded XML-Microparser
-Package found under Releases.
+You need Python3 setuptools to build the package manually. Pytest / PEP-8 packages are required to run tests.
 
 ```bash
-# apt-get install python3-setuptools python3-pip
+# apt-get install python3-setuptools python3-pip python3-pytest python3-pytest-pep8
 ```
 
 >[!IMPORTANT]  
