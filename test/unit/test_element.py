@@ -1,8 +1,7 @@
-# -*- coding: utf8 -*-
-
 import pytest
 import logging
-import microparser
+
+from xmlmicroparser import microparser
 
 
 class TestElement():
