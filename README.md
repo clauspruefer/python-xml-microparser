@@ -44,11 +44,12 @@ Do this for a pip system where `--break-system-packages` is needed.
 
 ## 3. Build Manually
 
-First update local git repository. The `setup.py` metadata used for pip resides in `/`.
+Clone git repository and change dir.
 
 ```bash
-# cd repodir
 # git clone https://github.com/clauspruefer/python-xml-microparser.git
+# cd python-xml-microparser
+
 ```
 ## 3.1. Build As Non-Root-User
 
