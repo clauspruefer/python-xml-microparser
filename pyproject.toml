@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "xmlmicroparser"
-version = "0.54beta"
+version = "0.55beta"
 authors = [
   { name="Claus Prüfer", email="pruefer@webcodex.de" },
 ]
