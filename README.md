@@ -8,17 +8,18 @@ Documentation including examples can be found at either [./doc](./doc) or [https
 
 ## 2. Installation
 
-Most Linux Distributions come with already Python3 met dependencies (see **2.1**).
+```bash
+# pip install xmlmicroparser
+```
 
-Just download the current Relase Zip / Tarball @ [Release 0.54Beta](https://github.com/clauspruefer/python-xml-microparser/releases/tag/0.54beta) and continue with section **2.2**.
+Or download the current Relase Zip / Tarball @ [Release 0.54Beta](https://github.com/clauspruefer/python-xml-microparser/releases/tag/0.54beta) and continue with section **2.2**.
 
 ## 2.1. Dependencies
 
-You need the `pip3` Python3 Package Installer, Python3 Setuptools `python3-setuptools` and the downloaded XML-Microparser
-Package found under Releases.
+You need Python3 setuptools to build the package manually. Pytest / PEP-8 packages are required to run tests.
 
 ```bash
-# apt-get install python3-setuptools python3-pip
+# apt-get install python3-setuptools python3-pip python3-pytest python3-pytest-pep8
 ```
 
 >[!IMPORTANT]  
@@ -43,13 +44,14 @@ Do this for a pip system where `--break-system-packages` is needed.
 
 ## 3. Build Manually
 
-First update local git repository. The `setup.py` metadata used for pip resides in `/`.
+Clone git repository and change dir.
 
 ```bash
-# cd repodir
 # git clone https://github.com/clauspruefer/python-xml-microparser.git
+# cd python-xml-microparser
+
 ```
-## 2.3. Build As Non-Root-User
+## 3.1. Build As Non-Root-User
 
 Build python-package with setup-tools (as non root user). This will generate the installabe tarball
 into `./dist/xmlmicroparser-0.54b0.tar.gz`.
@@ -58,7 +60,13 @@ into `./dist/xmlmicroparser-0.54b0.tar.gz`.
 # python3 setup.py sdist
 ```
 
-## 4. Boost Python
+## 4. Run Tests / Pytest
+
+```bash
+# pytest
+```
+
+## 5. Boost Python
 
 Using the XML-Microparser Module with Boost Python C++ https://www.boost.org/doc/libs/1_86_0/libs/python/doc/html/index.html 
 makes XML configuration handling in C++ projects easy.
