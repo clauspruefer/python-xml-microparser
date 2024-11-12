@@ -49,7 +49,7 @@ First update local git repository. The `setup.py` metadata used for pip resides 
 # cd repodir
 # git clone https://github.com/clauspruefer/python-xml-microparser.git
 ```
-## 2.3. Build As Non-Root-User
+## 3.3. Build As Non-Root-User
 
 Build python-package with setup-tools (as non root user). This will generate the installabe tarball
 into `./dist/xmlmicroparser-0.54b0.tar.gz`.
