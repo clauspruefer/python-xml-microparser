@@ -60,7 +60,7 @@ into `./dist/xmlmicroparser-0.54b0.tar.gz`.
 # python3 setup.py sdist
 ```
 
-## 4. Tests / Pytest
+## 4. Run Tests / Pytest
 
 ```bash
 # cd python-xml-microparser
