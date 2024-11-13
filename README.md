@@ -1,6 +1,6 @@
 # Python XML-Microparser Module
 
-The **python-xml-microparser** module is a small OOP based XML Parser without DTD / XSLT / SAX functionality.
+The Python **xmlmicroparser** module is a small OOP based XML Parser without DTD / XSLT / SAX functionality.
 
 ## 1. Documentation
 
