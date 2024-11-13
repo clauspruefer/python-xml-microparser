@@ -14,6 +14,9 @@ Documentation including examples can be found at either [./doc](./doc) or [https
 
 Or download the current Relase Zip / Tarball @ [Release 0.55Beta](https://github.com/clauspruefer/python-xml-microparser/releases/tag/0.55beta) and continue with section **2.2**.
 
+>[!NOTE]
+> Since Python 3.3 (PEP 405) Virtual Environments are proposed.
+
 ## 2.1. Dependencies
 
 You need Python3 setuptools to build the package manually. Pytest / PEP-8 packages are required to run tests.
@@ -22,9 +25,9 @@ You need Python3 setuptools to build the package manually. Pytest / PEP-8 packag
 # apt-get install python3-setuptools python3-pip python3-pytest python3-pytest-pep8
 ```
 
->[!IMPORTANT]  
-> The following section describes how to install the XML-Microparser package globally. Newer PIP Package Manager Versions forbid this.
-> It is possible to override by providing the `--break-system-packages` flag.
+>[!IMPORTANT]
+> The following section describes how to install the XML-Microparser package globally. Newer PIP Package Manager Versions prohibit
+> this by default. It is possible to override by providing the `--break-system-packages` flag.
 
 ## 2.2. Non-Restrictive PIP Install
 
