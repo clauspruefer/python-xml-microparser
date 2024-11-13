@@ -34,7 +34,7 @@ You need Python3 setuptools to build the package manually. Pytest / PEP-8 packag
 Do this for a pip system where `--break-system-packages` is not needed.
 
 ```bash
-# sudo pip3 install ./python-xml-microparser-0.54beta.tar.gz
+# sudo pip3 install ./python-xml-microparser-0.55beta.tar.gz
 ```
 
 ## 2.3. Restrictive PIP Install
@@ -42,7 +42,7 @@ Do this for a pip system where `--break-system-packages` is not needed.
 Do this for a pip system where `--break-system-packages` is needed.
 
 ```bash
-# sudo pip3 install ./python-xml-microparser-0.54beta.tar.gz --break-system-packages
+# sudo pip3 install ./python-xml-microparser-0.55beta.tar.gz --break-system-packages
 ```
 
 ## 3. Build Manually
