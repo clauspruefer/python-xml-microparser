@@ -15,7 +15,7 @@ class Looper():
     """ Looper Class.
 
     Provides processing of list of input items (type should be irrelevant,
-    actually set to type string) applied to multiple processing method
+    currently set to type string) applied to multiple processing method
     references (list).
 
     After single item has been processed by multiple methods specified in

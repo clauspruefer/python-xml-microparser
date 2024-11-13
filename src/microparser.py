@@ -26,7 +26,7 @@ class Parser():
     The XML will be transformed to internal JSON structs which can easily be
     iterated over or printed out.
 
-    Actually all lines **MUST** end with a "\\\\n" otherwise input will be
+    Currently all lines **MUST** end with a "\\\\n" otherwise input will be
     treated as a single line and tag closings will not be recognized correctly.
 
     See :doc:`examples` section for valid input, generated output and supported
@@ -47,7 +47,7 @@ class Parser():
     The microparser.Serializer class provides members/methods for recursive
     transformation processing for different transformer module/class types.
 
-    Actually only xml transformation is provided, the transformer module is
+    Currently only xml transformation is provided, the transformer module is
     built for future expansion (add multiple formats, e.g. yaml or else).
     """
 
@@ -317,10 +317,6 @@ class Serializer(JSONTransformer):
     """ Serializer class.
 
     Provides methods for element dependency handling. 
-
-    #TODO:
-    This class should be (syntactically correct) moved to own "xml" module
-    (xml.Element.Serializer).
     """
 
     def __init__(self):
@@ -378,7 +374,7 @@ class Serializer(JSONTransformer):
     def get_child_element_count(self):
         """ Return child element count.
 
-        :return: actual child element count
+        :return: current child element count
         :rtype: int
         """
         return len(self._child_elements)
@@ -410,10 +406,6 @@ class Element(Serializer):
     Provides methods for xml parsing. Inherits from Serializer class.
     As well hierarchical assignment by parent element/numerical id is
     part of this class.
-
-    #TODO:
-    This class should be (syntactically correct) moved to own "xml" module
-    (xml.Element).
     """
 
     def __init__(self, *, name, id, line_nr, parent_id):

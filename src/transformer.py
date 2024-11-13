@@ -21,7 +21,6 @@ class JSONTransformer():
 
     This class will be inherited by the microparser.Serializer class which
     provides base members/methods for recursive transformation processing.
-    .
     """
 
     def __init__(self):
