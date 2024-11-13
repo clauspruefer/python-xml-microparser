@@ -4,44 +4,33 @@
 Intro
 =====
 
-This Python 3 Module is built to parse XML input data to easy to use internal
-python structs. As well a transformation from XML to JSON format is possible.
+A tiny Python XML Parser Module without DTD / XSLT / SAX functionality.
 
 .. note::
-    The module does **NOT** provide XSLT/DTD parsing, just plain tag,
-    attribute, value and recursive dependencies are part of this module.
+    **NO** DTD / XSLT / SAX parsing, just plain XML supported.
 
 Dependencies
 ============
 
-On a ubuntu 18.04LTS system run the following to get everything working:
+On current Debian 12 / Ubuntu 22.04.3, 24.04.1 install the following packages:
 
 .. code-block:: bash
 
-    # install pip3 (pip for python3)
-    apt-get install python3-pip
+    # install packages
+    apt-get install python3-pip python3-sphinx python3-sphinx-rtd-theme
 
-    # install sphinx documentation system
-    pip3 install sphinx
-
-    # install read the docs theme
-    pip3 install sphinx_rtd_theme
-
-    # install pytest to run integration- and unit tests
-    pip3 install -U pytest
-
-    # install pytest html output module
-    pip3 install pytest-html
+    # install pytest to run integration and unit tests
+    apt-get install python3-pytest python3-pytest-pep8
 
 How to run tests
 ================
 
-To run all tests (unit and integration) run the following commands:
+To run all tests (unit and integration) after pip package installation do:
 
 .. code-block:: bash
 
-    # run all tests (cd to root path)
-    export PYTHONPATH=./src && py.test --html=testresults.html
+    # run pytest
+    pytest
 
 Documentation
 =============

@@ -1,8 +1,8 @@
 .. api
 
-===
-API
-===
+=============================
+Internal Class Representation
+=============================
 
 Microparser
 ***********
