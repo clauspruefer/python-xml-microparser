@@ -4,7 +4,7 @@ The Python **xmlmicroparser** module is a small OOP based XML Parser without DTD
 
 ## 1. Documentation
 
-Documentation including examples can be found at either [./doc](./doc) or [https://pythondocs.webcodex.de/xml-microparser/](https://pythondocs.webcodex.de/xml-microparser/).
+Documentation including examples can be found at either [./doc](./doc) or [https://pythondocs.webcodex.de/xml-microparser/](https://pythondocs.webcodex.de/xml-microparser).
 
 ## 2. Installation
 
@@ -12,7 +12,7 @@ Documentation including examples can be found at either [./doc](./doc) or [https
 # pip install xmlmicroparser
 ```
 
-Or download the current Relase Zip / Tarball @ [Release 0.55Beta](https://github.com/clauspruefer/python-xml-microparser/releases/tag/0.55beta) and continue with section **2.2**.
+Or download the current Relase Zip / Tarball @ [Release 0.6rc1](https://github.com/clauspruefer/python-xml-microparser/releases/tag/0.6rc1) and continue with section **2.2**.
 
 >[!NOTE]
 > Since Python 3.3 (PEP 405) Virtual Environments are proposed.
@@ -34,7 +34,7 @@ You need Python3 setuptools to build the package manually. Pytest / PEP-8 packag
 Do this for a pip system where `--break-system-packages` is not needed.
 
 ```bash
-# sudo pip3 install ./python-xml-microparser-0.55beta.tar.gz
+# sudo pip3 install ./xmlmicroparser-0.6rc1.tar.gz
 ```
 
 ## 2.3. Restrictive PIP Install
@@ -42,7 +42,7 @@ Do this for a pip system where `--break-system-packages` is not needed.
 Do this for a pip system where `--break-system-packages` is needed.
 
 ```bash
-# sudo pip3 install ./python-xml-microparser-0.55beta.tar.gz --break-system-packages
+# sudo pip3 install ./xmlmicroparser-0.6rc1.tar.gz --break-system-packages
 ```
 
 ## 3. Build Manually
@@ -57,7 +57,7 @@ Clone git repository and change dir.
 ## 3.1. Build As Non-Root-User
 
 Build python-package with setup-tools (as non root user). This will generate the installabe tarball
-into `./dist/xmlmicroparser-0.55b0.tar.gz`.
+into `./dist/xmlmicroparser-0.6rc1.tar.gz`.
 
 ```bash
 # python3 setup.py sdist
@@ -66,7 +66,7 @@ into `./dist/xmlmicroparser-0.55b0.tar.gz`.
 ## 3.2. Install As Root-User
 
 ```bash
-# sudo pip3 install ./dist/xmlmicroparser-0.55b0.tar.gz --break-system-packages
+# sudo pip3 install ./dist/xmlmicroparser-0.6rc1.tar.gz --break-system-packages
 ```
 
 ## 4. Run Tests / Pytest
@@ -77,7 +77,7 @@ into `./dist/xmlmicroparser-0.55b0.tar.gz`.
 
 ## 5. Example Usage / Boost::Python
 
-Using the XML-Microparser Module with Boost Python C++ https://www.boost.org/doc/libs/1_86_0/libs/python/doc/html/index.html 
+Using the XML-Microparser Module with Boost Python C++ https://www.boost.org/doc/libs/1_86_0/libs/python/doc/html/index.html
 makes XML configuration handling in C++ projects easy.
 
-See @ https://github.com/WEBcodeX1/http-1.2/.
+See @ https://github.com/WEBcodeX1/http-1.2.
