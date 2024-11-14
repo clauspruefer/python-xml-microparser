@@ -126,15 +126,9 @@ Duplicate elements can be used to process multiple configuration items
     payload = """
         <config>\n
             <vhosts\n
-                <vhost>\n
-                <vhost name="vhost1" b="value1"></vhost>\n
-                </vhost>\n
-                <vhost>\n
-                    <vhost name="vhost2" b="value2"></vhost>\n
-                </vhost>\n
-                <vhost>\n
-                    <vhost name="vhost3" b="value3"></vhost>\n
-                </vhost>\n
+                <vhost name="vhost1" prop1="value1"></vhost>\n
+                <vhost name="vhost2" prop1="value2"></vhost>\n
+                <vhost name="vhost3" prop1="value3"></vhost>\n
             </vhosts>\n
         </config>\n"""
 
@@ -155,9 +149,9 @@ Output (Printed Representation)
         {'vhosts':
             {
                 'vhost': [
-                    {'vhost': {'attributes': {'name': 'vhost1', 'b': 'value1'}}, 'attributes': {}},
-                    {'vhost': {'attributes': {'name': 'vhost2', 'b': 'value2'}}, 'attributes': {}},
-                    {'vhost': {'attributes': {'name': 'vhost3', 'b': 'value3'}}, 'attributes': {}}
+                    {'vhost': {'attributes': {'name': 'vhost1', 'prop1': 'value1'}}, 'attributes': {}},
+                    {'vhost': {'attributes': {'name': 'vhost2', 'prop1': 'value2'}}, 'attributes': {}},
+                    {'vhost': {'attributes': {'name': 'vhost3', 'prop1': 'value3'}}, 'attributes': {}}
                 ],
                 'attributes': {}
             },
@@ -184,4 +178,4 @@ following:
     for element in r['config']['vhosts']['vhost']:
         vhost_attributes = element['vhost']['attributes']
         vhost_name = vhost_attributes['name']
-        vhost_attribute_b = vhost_attributes['b']
+        vhost_attribute_prop1 = vhost_attributes['prop1']
