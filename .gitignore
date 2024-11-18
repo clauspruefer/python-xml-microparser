@@ -14,3 +14,5 @@ __pycache__
 .swp
 assets
 build
+*.*~
+*.egg-info
