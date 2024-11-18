@@ -4,7 +4,7 @@ The Python **xmlmicroparser** module is a small OOP based XML Parser without DTD
 
 ## 1. Documentation
 
-Documentation including examples can be found at either [./doc](./doc) or [https://pythondocs.webcodex.de/xml-microparser/](https://pythondocs.webcodex.de/xml-microparser).
+Documentation including examples can be found at either ./doc or [https://pythondocs.webcodex.de/xml-microparser](https://pythondocs.webcodex.de/xml-microparser).
 
 ## 2. Installation
 
