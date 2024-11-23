@@ -22,7 +22,7 @@ Transform the complete XML to internal dict/JSON.
 
 .. code-block:: python
 
-    import microparser
+    from xmlmicroparser import microparser
 
     payload = """
         <tag1>\n
@@ -53,7 +53,7 @@ Get element value by name (if unique).
 
 .. code-block:: python
 
-    import microparser
+    from xmlmicroparser import microparser
 
     payload = """
         <tag1>\n
@@ -84,7 +84,7 @@ Get element value by id.
 
 .. code-block:: python
 
-    import microparser
+    from xmlmicroparser import microparser
 
     payload = """
         <tag1>\n
@@ -121,7 +121,7 @@ Duplicate elements can be used to process multiple configuration items
 
 .. code-block:: python
 
-    import microparser
+    from xmlmicroparser import microparser
 
     payload = """
         <config>\n
@@ -166,10 +166,11 @@ To iterate over results (for each vhost) from the previous example, do the follo
 
 .. code-block:: python
 
+    from xmlmicroparser import microparser
+
     parser = microparser.Parser(payload)
 
-    parser.build_serializer()
-    parser.process_json()
+    parser.build_serializer().process_json()
 
     r = parser.get_root_element().get_json_dict()
 
