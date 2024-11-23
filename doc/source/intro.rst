@@ -4,15 +4,29 @@
 Intro / Module Description
 ==========================
 
-A tiny Python XML Parser Module without DTD / XSLT / SAX functionality.
+The **xmlmicroparser** Python Module provides basic XML Parser functionality without DTD /
+XSLT / SAX features.
 
 .. note::
-    **NO** DTD / XSLT / SAX parsing, only plain (recursive) XML supported.
+    **No** "Document Type Definition", "Extensible Stylesheet Language Transformation" or
+    "Simple API for XML", only **plain XML parsing** (recursive) supported.
 
-1. Dependencies
+1. Basic Install
+================
+
+.. code-block:: bash
+
+    pip3 install xmlmicroparser
+
+2. Dependencies
 ===============
 
-On current Debian 12 / Ubuntu 22.04.3, 24.04.1 install the following packages.
+Runs module independend.
+
+3. Build Dependencies
+=====================
+
+On current Debian 12 / Ubuntu 22.04.3, 24.04.1 install the following additional packages (Documentation Rendering & Testing).
 
 .. code-block:: bash
 
@@ -22,25 +36,24 @@ On current Debian 12 / Ubuntu 22.04.3, 24.04.1 install the following packages.
     # install pytest for running unit and integration tests
     apt-get install python3-pytest python3-pytest-pep8
 
-2. How to run tests
-===================
+4. Tests
+========
 
-To run all tests (unit and integration) after pip package installation do.
+To run all tests (unit and integration) after pip package installation.
 
 .. code-block:: bash
 
     # run pytest
     cd ./ && pytest
 
-3. Documentation
-================
+5. Current Features
+===================
 
-To build documentation (html, pdf).
+- Basic XML Parsing (recursive)
+- XML to JSON Transformation
+- Extendable Transformation Classes
 
-.. code-block:: bash
+6. Planned Features
+===================
 
-    # build html documentation (found in doc/build/html/index.html)
-    cd ./doc && make html
-
-    # build html documentation (found in doc/build/latex/python-xml-microparser.pdf)
-    cd ./doc && make latexpdf
+- Multiple Transformation Types (e.g. YAML)

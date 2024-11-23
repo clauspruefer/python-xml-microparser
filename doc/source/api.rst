@@ -5,7 +5,7 @@ Internal Class Representation
 =============================
 
 Microparser
-***********
+===========
 
 .. automodule:: microparser
    :members: Parser, Element, Serializer
@@ -15,7 +15,7 @@ Microparser
    :show-inheritance:
 
 Transformer
-***********
+===========
 
 .. automodule:: transformer
    :members: JSONTransformer
@@ -25,7 +25,7 @@ Transformer
    :show-inheritance:
 
 Helper
-******
+======
 
 .. automodule:: helper
    :members: Looper
