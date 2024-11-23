@@ -1,16 +1,16 @@
 .. intro
 
-=====
-Intro
-=====
+==========================
+Intro / Module Description
+==========================
 
 A tiny Python XML Parser Module without DTD / XSLT / SAX functionality.
 
 .. note::
     **NO** DTD / XSLT / SAX parsing, just plain XML supported.
 
-Dependencies
-============
+1. Dependencies
+===============
 
 On current Debian 12 / Ubuntu 22.04.3, 24.04.1 install the following packages:
 
@@ -22,8 +22,8 @@ On current Debian 12 / Ubuntu 22.04.3, 24.04.1 install the following packages:
     # install pytest to run integration and unit tests
     apt-get install python3-pytest python3-pytest-pep8
 
-How to run tests
-================
+2. How to run tests
+===================
 
 To run all tests (unit and integration) after pip package installation do:
 
@@ -32,8 +32,8 @@ To run all tests (unit and integration) after pip package installation do:
     # run pytest
     pytest
 
-Documentation
-=============
+3. Documentation
+================
 
 To build documentation (html, pdf):
 

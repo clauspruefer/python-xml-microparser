@@ -15,8 +15,8 @@ The following examples and use cases show how to cope with the XML parser.
     **Loop over results** shows how to efficiently use XML data as configuration
     method for your projects.
 
-Use complete XML
-================
+1. Use complete XML
+===================
 
 Transform the complete XML to internal dict/JSON.
 
@@ -46,8 +46,8 @@ Output (Printed Representation)
 
     {'tag1': {'tag2': {'tag3': 'value3', 'attributes': {'a': '1', 'b': 'value1'}}, 'attributes': {}}}
 
-Get element by name
-===================
+2. Get element by name
+======================
 
 Get element value by name (if unique).
 
@@ -77,8 +77,8 @@ Output (Printed Representation)
 
     {'tag2': {'tag3': 'value3', 'attributes': {'a': '1', 'b': 'value1'}}}
 
-Get element by id
-=================
+3. Get element by id
+====================
 
 Get element value by id.
 
@@ -102,8 +102,8 @@ Get element value by id.
 
     print(r)
 
-Duplicate elements (same name)
-==============================
+4. Duplicate elements (same name)
+=================================
 
 Duplicate elements can be used to process multiple configuration items
 (e.g. a webserver configuration with multiple virtual hosts).
@@ -159,11 +159,10 @@ Output (Printed Representation)
         }
     }
 
-Loop over results
-=================
+5. Process Results
+==================
 
-To loop over the results (for each vhost) from the previous example, do the
-following:
+To iterate over results (for each vhost) from the previous example, do the following:
 
 .. code-block:: python
 
@@ -174,7 +173,6 @@ following:
 
     r = parser.get_root_element().get_json_dict()
 
-    # note that you have to add the 'vhost' list at the end
     for element in r['config']['vhosts']['vhost']:
         vhost_attributes = element['vhost']['attributes']
         vhost_name = vhost_attributes['name']
