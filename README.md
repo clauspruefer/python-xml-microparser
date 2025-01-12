@@ -9,7 +9,8 @@ Documentation including examples can be found at either ./doc or [https://python
 ## 2. Installation
 
 ```bash
-# pip install xmlmicroparser
+# install via pip
+pip install xmlmicroparser
 ```
 
 Or download the current Relase Zip / Tarball @ [Release 1.0rc1](https://github.com/clauspruefer/python-xml-microparser/releases/tag/1.0rc1) and continue with section **2.2**.
@@ -22,7 +23,8 @@ Or download the current Relase Zip / Tarball @ [Release 1.0rc1](https://github.c
 You need Python3 setuptools to build the package manually. Pytest / PEP-8 packages are required to run tests.
 
 ```bash
-# apt-get install python3-setuptools python3-pip python3-pytest python3-pytest-pep8
+# install base dependencies
+apt-get install python3-setuptools python3-pip python3-pytest python3-pytest-pep8
 ```
 
 >[!IMPORTANT]
@@ -34,7 +36,8 @@ You need Python3 setuptools to build the package manually. Pytest / PEP-8 packag
 Do this for a pip system where `--break-system-packages` is not needed.
 
 ```bash
-# sudo pip3 install ./xmlmicroparser-1.0rc1.tar.gz
+# install local pip
+sudo pip3 install ./xmlmicroparser-1.0rc1.tar.gz
 ```
 
 ## 2.3. Restrictive PIP Install
@@ -42,17 +45,18 @@ Do this for a pip system where `--break-system-packages` is not needed.
 Do this for a pip system where `--break-system-packages` is needed.
 
 ```bash
-# sudo pip3 install ./xmlmicroparser-1.0rc1.tar.gz --break-system-packages
+# install local pip
+sudo pip3 install ./xmlmicroparser-1.0rc1.tar.gz --break-system-packages
 ```
 
 ## 3. Build Manually
 
-Clone git repository and change dir.
+Clone git repository and change dir inside.
 
 ```bash
-# git clone https://github.com/clauspruefer/python-xml-microparser.git
-# cd python-xml-microparser
-
+# clone and cd into repo
+git clone https://github.com/clauspruefer/python-xml-microparser.git
+cd python-xml-microparser
 ```
 ## 3.1. Build As Non-Root-User
 
@@ -60,19 +64,22 @@ Build python-package with setup-tools (as non root user). This will generate the
 into `./dist/xmlmicroparser-1.0rc1.tar.gz`.
 
 ```bash
-# python3 setup.py sdist
+# build source distribution
+python3 setup.py sdist
 ```
 
 ## 3.2. Install As Root-User
 
 ```bash
-# sudo pip3 install ./dist/xmlmicroparser-1.0rc1.tar.gz --break-system-packages
+# install via pip
+sudo pip3 install ./dist/xmlmicroparser-1.0rc1.tar.gz --break-system-packages
 ```
 
 ## 4. Run Tests / Pytest
 
 ```bash
-# pytest
+# run pytest
+pytest
 ```
 
 ## 5. Example Usage / Boost::Python
