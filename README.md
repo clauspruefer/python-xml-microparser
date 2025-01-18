@@ -13,7 +13,7 @@ Documentation including examples can be found at either ./doc or [https://python
 pip install xmlmicroparser
 ```
 
-Or download the current Relase Zip / Tarball @ [Release 1.0rc1](https://github.com/clauspruefer/python-xml-microparser/releases/tag/1.0rc1) and continue with section **2.2**.
+Or download the current Release Zip / Tarball @ [Release 1.0rc1](https://github.com/clauspruefer/python-xml-microparser/releases/tag/1.0rc1) and continue with section **2.2**.
 
 >[!NOTE]
 > Since Python 3.3 (PEP 405) Virtual Environments are proposed.
