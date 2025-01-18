@@ -60,7 +60,7 @@ cd python-xml-microparser
 ```
 ## 3.1. Build As Non-Root-User
 
-Build python-package with setup-tools (as non root user). This will generate the installabe tarball
+Build python-package with setup-tools (as non root user). This will generate the installable tarball
 into `./dist/xmlmicroparser-1.0rc1.tar.gz`.
 
 ```bash
