@@ -1,6 +1,7 @@
 # Python XML-Microparser Module
 
 ![push main](https://github.com/clauspruefer/python-xml-microparser/actions/workflows/pylint.yaml/badge.svg)
+[![PyPI version](https://badge.fury.io/py/xmlmicroparser.svg)](https://badge.fury.io/py/xmlmicroparser)
 
 The Python **xmlmicroparser** module is a small OOP based XML Parser without DTD / XSLT / SAX functionality.
 
