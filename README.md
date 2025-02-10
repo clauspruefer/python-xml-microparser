@@ -90,3 +90,5 @@ Using the XML-Microparser Module with Boost Python C++ https://www.boost.org/doc
 makes XML configuration handling in C++ projects easy.
 
 See @ https://github.com/WEBcodeX1/http-1.2.
+
+[![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/PyCQA/pylint)
