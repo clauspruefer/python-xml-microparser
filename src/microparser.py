@@ -9,7 +9,6 @@
 # ]*[ --------------------------------------------------------------------- ]*[
 
 import re
-import json
 import logging
 
 from xmlmicroparser.transformer import JSONTransformer
