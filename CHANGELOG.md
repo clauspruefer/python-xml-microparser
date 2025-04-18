@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 1.0
+
+- Add Virtual Environment install instructions
+- Add pylint linting / CI
+- Correct source according to pylint
+- Adapt test code
+
 ## Version 1.0rc1
 
 - Correct README.md (package name and version)
