@@ -33,6 +33,9 @@ python3 -m pip install --upgrade pip
 
 # install xmlmicroparser module
 pip3 install xmlmicroparser
+
+# install dependencies
+pip3 install pytest pytest-pep8
 ```
 
 ## 2.1. Dependencies
