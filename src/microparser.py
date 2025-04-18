@@ -106,16 +106,17 @@ class Parser():
         """
         self._add_child_elements_recursive(self.get_root_element())
 
-    def get_element_by_id(self, id):
+    def get_element_by_id(self, element_id):
         """ Get element by internal numerical id.
 
-        :param int id: internal numerical element id
+        :param int element_id: internal numerical element id
         :return: found element
         :rtype: Element or None
         """
         for element in self._elements:
-            if element.get_id() == id:
+            if element.get_id() == element_id:
                 return element
+        return None
 
     def get_element_by_name(self, name):
         """ Get element by xml element id.
@@ -127,6 +128,7 @@ class Parser():
         for element in self._elements:
             if element.get_name() == name:
                 return element
+        return None
 
     def get_elements(self):
         """ Return processed elements list.
@@ -144,15 +146,15 @@ class Parser():
         """
         return self._elements[0]
 
-    def get_child_elements_by_id(self, id):
+    def get_child_elements_by_id(self, element_id):
         """ Return elements children searched by element numerical id.
 
-        :param int id: element internal numerical id
+        :param int element_id: element internal numerical id
         :yield: found item
         :rtype: elements (list of objects) or None
         """
         for item in self._elements:
-            if item.get_parent_id() == id:
+            if item.get_parent_id() == element_id:
                 yield item
 
     def get_child_element(self, name):
@@ -179,8 +181,8 @@ class Parser():
                 if element.get_child_element_count() == 0:
                     process_ids.append(element.get_id())
 
-            for id in process_ids:
-                root_element.get_element_by_element_id(id).json_transform()
+            for element_id in process_ids:
+                root_element.get_element_by_element_id(element_id).json_transform()
 
         root_element.set_json_attributes()
 
@@ -253,10 +255,10 @@ class Parser():
 
         :rtype: Iterator[int]
         """
-        id = 0
+        element_id = 0
         while True:
-            id += 1
-            yield id
+            element_id += 1
+            yield element_id
 
     def _parse_line(self, line):
         """ Parse single xml data line.
@@ -275,7 +277,7 @@ class Parser():
 
             args = {
                 'name': element_id,
-                'id': self._current_item_id.__next__(),
+                'element_id': self._current_item_id.__next__(),
                 'line_nr': line_nr,
                 'parent_id': self._get_last_unclosed_element_id()
             }
@@ -387,6 +389,7 @@ class Serializer(JSONTransformer):
         for element in self.iterate():
             if element.get_id() == element_id:
                 return element
+        return None
 
     def get_element_by_element_name(self, element_name):
         """ Get element by element numerical id.
@@ -397,6 +400,7 @@ class Serializer(JSONTransformer):
         for element in self.iterate():
             if element.get_name() == element_name:
                 return element
+        return None
 
 
 class Element(Serializer):
@@ -407,10 +411,10 @@ class Element(Serializer):
     part of this class.
     """
 
-    def __init__(self, *, name, id, line_nr, parent_id):
+    def __init__(self, *, name, element_id, line_nr, parent_id):
         """
         :param str name: xml element name (id)
-        :param int id: xml element internal processing id
+        :param int element_id: xml element internal processing id
         :param int line_nr: line number of found xml opening tag in payload data
         :param int parent_id: parent element numerical id
         :ivar str _name: xml element id
@@ -423,14 +427,14 @@ class Element(Serializer):
         """
 
         assert isinstance(name, str), 'name must be string type'
-        assert isinstance(id, int), 'id must be int type'
+        assert isinstance(element_id, int), 'id must be int type'
         assert isinstance(line_nr, int), 'id must be int type'
 
         if parent_id is not None:
             assert isinstance(parent_id, int), 'parent_id must be int type'
 
         self._name = name
-        self._id = id
+        self._id = element_id
         self._parent_id = parent_id
         self._parent_element = None
         self._attributes = {}
@@ -547,6 +551,7 @@ class Element(Serializer):
         """
         if name in self._attributes:
             return self._attributes[name]
+        return None
 
     def get_attributes(self):
         """ Get attributes.
