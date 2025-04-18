@@ -22,11 +22,20 @@ Or download the current Release Zip / Tarball @ [Release 1.0rc1](https://github.
 > Since Python 3.3 (PEP 405) Virtual Environments are proposed.
 
 ```bash
-# install into virtual environment
+# setup virtual-env
 python3 -m venv .xml-microparser
+
+# activate virtual-env
 source .xml-microparser/bin/activate
+
+# upgrade pip
 python3 -m pip install --upgrade pip
+
+# install xmlmicroparser module
 pip3 install xmlmicroparser
+
+# install dependencies
+pip3 install pytest pytest-pep8
 ```
 
 ## 2.1. Dependencies

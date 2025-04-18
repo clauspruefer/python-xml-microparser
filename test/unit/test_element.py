@@ -12,14 +12,14 @@ class TestElement():
 
         e = microparser.Element(
             name = 'element1',
-            id = 1,
+            element_id = 1,
             line_nr = 1,
             parent_id = None
         )
 
         e = microparser.Element(
             name = 'element2',
-            id = 100,
+            element_id = 100,
             line_nr = 10,
             parent_id = 10
         )
@@ -31,7 +31,7 @@ class TestElement():
         with pytest.raises(AssertionError):
             e = microparser.Element(
                 name = 1,
-                id = 1,
+                element_id = 1,
                 line_nr = 1,
                 parent_id = None
             )
@@ -39,7 +39,7 @@ class TestElement():
         with pytest.raises(AssertionError):
             e = microparser.Element(
                 name = 'element',
-                id = 'name',
+                element_id = 'name',
                 line_nr = 1,
                 parent_id = None
             )
@@ -47,7 +47,7 @@ class TestElement():
         with pytest.raises(AssertionError):
             e = microparser.Element(
                 name = 'element',
-                id = 1,
+                element_id = 1,
                 line_nr = {},
                 parent_id = None
             )
@@ -55,7 +55,7 @@ class TestElement():
         with pytest.raises(AssertionError):
             e = microparser.Element(
                 name = None,
-                id = 1,
+                element_id = 1,
                 line_nr = 1,
                 parent_id = 10
             )
@@ -63,7 +63,7 @@ class TestElement():
         with pytest.raises(AssertionError):
             e = microparser.Element(
                 name = 'element',
-                id = 1,
+                element_id = 1,
                 line_nr = 1,
                 parent_id = 'test'
             )
@@ -77,7 +77,7 @@ class TestElement():
         p._elements.append(
             microparser.Element(
                 name = 'element1',
-                id = 101,
+                element_id = 101,
                 line_nr = 100,
                 parent_id = None
             )
@@ -86,7 +86,7 @@ class TestElement():
         p._elements.append(
             microparser.Element(
                 name = 'element2',
-                id = 210,
+                element_id = 210,
                 line_nr = 101,
                 parent_id = 101
             )
@@ -95,7 +95,7 @@ class TestElement():
         p._elements.append(
             microparser.Element(
                 name = 'element3',
-                id = 28,
+                element_id = 28,
                 line_nr = 200,
                 parent_id = 101
             )

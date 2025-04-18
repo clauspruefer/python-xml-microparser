@@ -5,7 +5,7 @@ from xmlmicroparser import microparser
 
 
 def check_element(element, properties):
-    assert element._id == properties['id']
+    assert element._id == properties['element_id']
     assert element._name == properties['name']
     assert element._attributes == properties['attributes']
     assert element._parent_id == properties['parent_id']
@@ -32,7 +32,7 @@ class TestParser():
         elements = p.get_elements()
 
         props1 = {
-            'id': 1,
+            'element_id': 1,
             'name': 'outertag',
             'attributes': {'test1': 'string1', 'test2': 'string2'},
             'parent_id': None,
@@ -44,7 +44,7 @@ class TestParser():
         check_element(elements[0], props1)
 
         props2 = {
-            'id': 2,
+            'element_id': 2,
             'name': 'innertag1',
             'attributes': {},
             'parent_id': 1,
@@ -56,7 +56,7 @@ class TestParser():
         check_element(elements[1], props2)
 
         props3 = {
-            'id': 3,
+            'element_id': 3,
             'name': 'innertag2',
             'attributes': {},
             'parent_id': 2,
