@@ -11,17 +11,34 @@ XSLT / SAX features.
     **No** "Document Type Definition", "Extensible Stylesheet Language Transformation" or
     "Simple API for XML", only **plain XML parsing** (recursive) supported.
 
-1. Basic Install
-================
+1. System Install
+=================
 
 .. code-block:: bash
 
+    pip3 install xmlmicroparser --break-system-packages
+
+2. Virtual Env Install
+======================
+
+Install into a python Virtual Environment is proposed.
+
+.. code-block:: bash
+
+    # setup virtual-env
+    python3 -m venv .xml-microparser
+
+    # activate virtual-env
+    source .xml-microparser/bin/activate
+
+    # upgrade pip
+    python3 -m pip install --upgrade pip
+
+    # install xmlmicroparser module
     pip3 install xmlmicroparser
 
-2. Dependencies
-===============
-
-Runs module independend.
+    # install dependencies
+    pip3 install pytest pytest-pep8
 
 3. Build Dependencies
 =====================
