@@ -21,6 +21,14 @@ Or download the current Release Zip / Tarball @ [Release 1.0rc1](https://github.
 >[!NOTE]
 > Since Python 3.3 (PEP 405) Virtual Environments are proposed.
 
+```bash
+# install into virtual environment
+python3 -m venv .xml-microparser
+source .xml-microparser/bin/activate
+python3 -m pip install --upgrade pip
+pip3 install xmlmicroparser
+```
+
 ## 2.1. Dependencies
 
 You need Python3 setuptools to build the package manually. Pytest / PEP-8 packages are required to run tests.
